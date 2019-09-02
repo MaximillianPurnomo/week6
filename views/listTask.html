@@ -1,0 +1,54 @@
+<html lang="en">
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equic="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1><a href="/">Home</a>
+        <a href="/addNewTask">Add New Task</a>
+        <a href="/deleteID">Delete task by ID</a>
+        <a href="/deleteCompletedPage">Delete completed</a>
+        <a href="/updateStatusPage">Update status</a></h1>
+        <table >
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Due Date</th>
+                <th>Assign to</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+            <%for(let i=0;i<task.length;i++){%>
+            <tr>
+                <td>
+                    <%= task[i].id%>
+                </td>
+                <td>
+                    <%= task[i].name%>
+                </td>
+                <td>
+                    <%=task[i].dueDate%>
+                </td>
+                <td>
+                    <%= task[i].assignTo%>
+                </td>
+                <td>
+                    <%= task[i].status%>
+                </td>
+                <td>
+                    <%=task[i].description%>
+                </td>
+
+            </tr>
+            <%}%>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <h1>
+        <a href="/">Home</a>
+        <a href="/addNewTask">Add new task</a>
+        <a href="/listTask">List task</a>
+        <a href="/deleteID">Delete task by ID</a>
+        <a href="/deleteCompletedPage">Delete completed</a>
+        <br>Delete a task by ID<br>Update status <br></h1>
+        <form action="/updatingStatus" method="POST">
+            ID <input type="text" name="id"/><br>
+            New Status <input type="text" name="newStatus"/><br>
+            <button>submit</button>
+        </form>
+    </body>
+</html>
